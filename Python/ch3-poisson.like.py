@@ -19,11 +19,11 @@ def llhfunc(X, p, do_log=True):
     return np.sum(d_mat, axis=0) if do_log else \
            np.prod(d_mat, axis=0)
 
-# EXAMPLE RUN FOR TWO POSSIBLE VALUES OF THETA: 4 AND 30
-llhfunc(y_vals,np.array([4, 30]))
-
 # %%
 y_vals = np.array([1, 3, 1, 5, 2, 6, 8, 11, 0, 0])
+
+# EXAMPLE RUN FOR TWO POSSIBLE VALUES OF THETA: 4 AND 30
+llhfunc(y_vals,np.array([4, 30]))
 
 ruler = np.arange(.01, 20.01, .01)
 poison_ll = llhfunc(y_vals, ruler)
